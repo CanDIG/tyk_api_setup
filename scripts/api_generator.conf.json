@@ -1,0 +1,6 @@
+{
+	"policy_file_path_config" : "/opt/tyk-gateway/policies/policies.json",
+	"api_definition_output_path_config" : "/opt/tyk-gateway/apps/",
+	"tyk_secret" : "",
+	"tyk_server_url" : ""
+}
