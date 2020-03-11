@@ -1,0 +1,15 @@
+{
+	"CANDIG_API_ID" : "",
+	"CANDIG_API_NAME" : "",
+	"CANDIG_API_SLUG" : "",
+	"LOCAL_CANDIG_SERVER" : "",
+	"TYK_LISTEN_PATH" : "",
+	"KC_LOGIN_REDIRECT_PATH" : "",
+	"CANDIG_PUBLIC_URL" : "",
+	"CD_PUB_PORT" : "",
+	"KC_PUBLIC_URL" : "",
+	"KC_PUB_PORT" : "",
+	"KC_REALM" : "",
+	"KC_CLIENT_ID_64" : "",
+	"TYK_POLICY_ID" : ""
+}
