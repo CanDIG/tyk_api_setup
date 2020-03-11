@@ -24,7 +24,7 @@ To generate the API, you should go to the root of ```tyk_api_setup``` and execut
 $ python scripts/api_generator.py path/to/conf/file
 ```
 
-This command generates a file with the same name as ```API_NAME``` on the ```confs``` file.
+This command generates a file with the same name as ```API_iD``` on the ```confs``` file.
 
 
 ## Requirements
