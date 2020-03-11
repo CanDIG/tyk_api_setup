@@ -34,5 +34,4 @@ This command generates a file with the same name as ```API_NAME``` on the ```con
 
 ## Write your conf file
 
-- For `LOCAL_CANDIG_SERVER`, the address should end with a `/`, e.g., `http://abc.xyz.ca:20230/`. This is where the TYK_LISTEN_PATH gets proxied to.
 - `TYK_LISTEN_PATH` should not have any slashes.
