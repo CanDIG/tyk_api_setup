@@ -2,6 +2,21 @@
 
 ### The following instruction is adapted from https://github.com/CanDIG/candig_compose/blob/a7448f3c5b46eb8fc45201a87b5ac0b51872b6ab/README.md
 
+## Requirements
+Prior to the setup for the file based Tyk API, ensure you have the following versions of Tyk components installed:
+```
+tyk-gateway >= 2.9.x
+tyk-pump >= 0.8.x
+tyk-dashboard >= 1.9.x
+redis >= 3.2.10
+mongo >= 3.0.15
+```
+
+Note that `tyk-dashboard` was installed as a requirement for `tyk-gateway` and `tyk-pump`.
+
+### Installion of the middleware
+The CanDIG Tyk middleware was installed for previous versions of the `candig-server`.  Check with `https://github.com/CanDIG/candig_tyk/tree/amanjeev/oidc-middleware` for instructions on installing the middleware in your Tyk environment.  At the time of this writing, branch `amanjeev/oidc-middleware` has not been merged into `master` but will be completed in the near future.
+
 ## Shut down your tyk-dashboard
 This part isn't strictly necessary, but the tyk-dashboard will be of no use.
 
@@ -134,15 +149,15 @@ $ curl ${TYK_HOST}:${TYK_PORT}/tyk/keys/create -H "x-tyk-authorization: ${TYK_SE
 '
 ```
 ## Reload your tyk-gateway
-A hot reload is 
+A hot reload can be performed using the following command:
 ```
 curl -H "x-tyk-authorization: ${TYK_SECRET}" -s ${TYK_HOST}:${TYK_PORT}/tyk/reload/group
 ```
-Or you can reload from command line.
+Or you can restart the service from the command line:
+```
+sudo service tyk-gateway restart
+```
 
 
-
-
-
-
-
+## Logs
+For logged events related to the `tyk-gateway`, review the `/var/log/messages` log file.
