@@ -14,7 +14,7 @@ mongo >= 3.0.15
 
 Note that `tyk-dashboard` was installed as a requirement for `tyk-gateway` and `tyk-pump`.
 
-### Installion of the middleware
+### Installation of the middleware
 The CanDIG Tyk middleware was installed for previous versions of the `candig-server`.  Check with `https://github.com/CanDIG/candig_tyk/tree/amanjeev/oidc-middleware` for instructions on installing the middleware in your Tyk environment.  At the time of this writing, branch `amanjeev/oidc-middleware` has not been merged into `master` but will be completed in the near future.
 
 ## Shut down your tyk-dashboard
