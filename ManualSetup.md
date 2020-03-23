@@ -75,7 +75,7 @@ Add it under `providers`, an example would be
 
 ```
 {
-	"openidoptions": {
+	"openid_options": {
 		"providers": [
 			{
 				"issuer": "http://candigauth.siteA.ca/auth/realms/candig",
