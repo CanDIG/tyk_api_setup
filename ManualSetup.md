@@ -69,7 +69,85 @@ Remember, `api_id, name, slug` should be unique among the APIs you add.
 Save it as api_${name_of_your_choice}.json under /opt/tyk-gateway/apps
 
 
-## Add Peer Keycloak for Federation
+## Set up Federation
+
+### Add Peer policies
+
+You will need to add peer policies to your `policies.json`, and add the authorized APIs under the new policy. 
+
+To simplify things, by default, `candig_policy_1` is used for all initial deployments with candig-compose or this script.
+
+***IMPORTANT: If you and the peer Tyk servers you add all use the default policy name, you may skip this part.***
+
+If not, you will need to manually add them. For example, you have the default policy, `candig_policy_1`, and your peer Tyk server has a policy named `candig_policy_2`, to authorize their policy to access your `api_candig`, you will need to add `candig_policy_2`.
+
+Before:
+```
+{
+	"candig_policy_1": {
+		"active": true,
+		"name": "CanDIG Policy",
+		"rate": 100,
+		"per": 1,
+		"quota_max": 10000,
+		"quota_renewal_rate": 3600,
+		"access_rights": {
+			"api_candig": {
+				"allowed_urls": [],
+				"api_id": "api_candig",
+				"api_name": "api_candig",
+				"versions": [
+					"Default"
+				]
+			}
+		}
+	}
+}
+```
+
+After:
+```
+{
+	"candig_policy_1": {
+		"active": true,
+		"name": "CanDIG Policy",
+		"rate": 100,
+		"per": 1,
+		"quota_max": 10000,
+		"quota_renewal_rate": 3600,
+		"access_rights": {
+			"api_candig": {
+				"allowed_urls": [],
+				"api_id": "api_candig",
+				"api_name": "api_candig",
+				"versions": [
+					"Default"
+				]
+			}
+		}
+	},
+	"candig_policy_2": {
+		"active": true,
+		"name": "CanDIG Policy",
+		"rate": 100,
+		"per": 1,
+		"quota_max": 10000,
+		"quota_renewal_rate": 3600,
+		"access_rights": {
+			"api_candig": {
+				"allowed_urls": [],
+				"api_id": "api_candig",
+				"api_name": "api_candig",
+				"versions": [
+					"Default"
+				]
+			}
+		}
+	}
+}
+```
+
+### Add Peer Keycloak
 
 Add it under `providers`, an example would be 
 
