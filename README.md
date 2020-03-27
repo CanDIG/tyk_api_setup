@@ -42,3 +42,5 @@ This command generates a file with the same name as ```API_iD``` on the ```confs
 - The script does not support the addition of multiple OIDC Providers yet, in order to add peer keycloaks for federation to work, you will need to manually edit the output API definition files. When you are done editing the API definitions files, you should do a hot reload, or restart Tyk. Instructions to add peer keycloaks are in `ManualSetup.md`.
 
 - The script does not support the custom configs that vary from environment to environment: some places have their SSL certificates somewhere else, and nothing needs to be set up here. If you want to set up mutual TLS, you should add `upsteam_certificates` as the key to your API definition file, and value being `{"$TYK_SERVER_ADDRESS": "<cert-id>"}.`.
+
+- The definitions output by this script will use a default policy name, `candig_policy_1`.

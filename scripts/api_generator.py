@@ -195,7 +195,7 @@ def readPolicyFile(policy_file_path):
 
 
 def writePolicy(api_config):
-    new_api_policy = api_config["TYK_POLICY_ID"]
+    new_api_policy = "candig_policy_1"
     try:
         new_api_id = api_config["CANDIG_API_ID"]
         new_api_name = api_config["CANDIG_API_NAME"]
@@ -258,7 +258,6 @@ def writePolicy(api_config):
             temp_api_auth_conf = {}
             temp_api_auth_conf["CANDIG_API_ID"] = api_config["AUTH_API_ID"]
             temp_api_auth_conf["CANDIG_API_NAME"] = api_config["AUTH_API_NAME"]
-            temp_api_auth_conf["TYK_POLICY_ID"] = api_config["TYK_POLICY_ID"]
 
             for key, value in temp_api_auth_conf.items():
                 output_json = replaceVariables(
