@@ -1,5 +1,5 @@
 {
-    "${TYK_POLICY_ID}": {
+    "candig_policy_1": {
         "access_rights": {
             "${CANDIG_API_ID}": {
                 "allowed_urls": [],
